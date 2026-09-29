@@ -29,7 +29,7 @@ export const site = {
   contact: {
     /**
      * WhatsApp en formato internacional, solo dígitos (54 9 + característica + número).
-     * PENDIENTE: número tomado del diseño original — confirmar con el cliente antes de publicar.
+     * Confirmado por el cliente (28/09/2026).
      */
     whatsapp: "5491123832536",
     /** Mensaje inicial para los botones directos de WhatsApp. */

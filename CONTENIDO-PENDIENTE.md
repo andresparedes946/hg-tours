@@ -8,7 +8,7 @@ no se publican placeholders, textos de ejemplo ni enlaces vacíos.
 | Dato | Estado | Efecto mientras falta |
 |---|---|---|
 | Nombre comercial definitivo | Provisorio: `HG TOURS` | Se usa el provisorio |
-| WhatsApp | Provisorio: `5491123832536` (tomado del diseño) | **Confirmar antes de publicar**: todas las consultas llegan a este número |
+| WhatsApp | Confirmado: `5491123832536` | — |
 | Instagram (usuario) | Falta | Se ocultan la sección Instagram y el enlace del footer |
 | Email | Falta | No se muestra en el footer |
 | Dominio definitivo | Falta (`NEXT_PUBLIC_SITE_URL`) | Sin canonical ni sitemap |
