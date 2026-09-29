@@ -46,9 +46,9 @@ export const needs = [
 export const unitSpecs: { label: string; value: string | null }[] = [
   { label: "Vehículo", value: "Mercedes-Benz Sprinter" },
   { label: "Color", value: "Negro" },
-  { label: "Pasajeros", value: null }, // PENDIENTE
+  { label: "Pasajeros", value: "19" },
   { label: "Equipaje", value: null }, // PENDIENTE
-  { label: "Año / modelo", value: null }, // PENDIENTE
+  { label: "Año", value: "2026" },
 ];
 
 /** Equipamiento visible en la foto del tablero. Posiciones en % sobre la imagen. */
@@ -71,7 +71,8 @@ export type Destination = {
   lat: number;
   lon: number;
   desc: string;
-  /** Video propio del destino. Sin video se muestra un panel tipográfico. */
+  /** Foto del destino. Tiene prioridad el video, si hay. Sin ninguno se muestra un panel tipográfico. */
+  image?: { src: string; alt: string };
   video?: (typeof media)[keyof typeof media];
   /** PENDIENTE: datos del recorrido. null = no se muestran. */
   info: { duration: string | null; departure: string | null; mode: string | null };
@@ -80,14 +81,14 @@ export type Destination = {
 const noInfo = { duration: null, departure: null, mode: null };
 
 export const destinations: Destination[] = [
-  { key: "salta", name: "Salta", lat: -24.8, lon: -65.4, desc: "Quebradas, cerros de colores y pueblos del norte.", info: noInfo },
-  { key: "iguazu", name: "Iguazú", lat: -25.6, lon: -54.6, desc: "La selva misionera y las cataratas.", info: noInfo },
-  { key: "cordoba", name: "Córdoba", lat: -31.4, lon: -64.2, desc: "Sierras, valles y rutas a pocas horas de viaje.", info: noInfo },
-  { key: "mendoza", name: "Mendoza", lat: -32.9, lon: -68.8, desc: "Montaña, viñedos y la cordillera de fondo.", info: noInfo },
-  { key: "buenosaires", name: "Buenos Aires", lat: -34.6, lon: -58.4, desc: "La ciudad como punto de partida o de llegada.", info: noInfo },
-  { key: "costa", name: "Costa Atlántica", lat: -38.0, lon: -57.6, desc: "Playas y ciudades balnearias sobre el mar.", info: noInfo },
-  { key: "bariloche", name: "Bariloche", lat: -41.1, lon: -71.3, desc: "Lagos, bosques y la cordillera patagónica.", video: media.bariloche, info: noInfo },
-  { key: "patagonia", name: "Patagonia", lat: -50.3, lon: -72.3, desc: "Grandes distancias, glaciares y estepa.", info: noInfo },
+  { key: "salta", name: "Salta", lat: -24.8, lon: -65.4, desc: "Quebradas, cerros de colores y pueblos del norte.", image: { src: "/images/destinos/salta.jpg", alt: "Cerros de colores y cardones en el norte salteño" }, info: noInfo },
+  { key: "iguazu", name: "Iguazú", lat: -25.6, lon: -54.6, desc: "La selva misionera y las cataratas.", image: { src: "/images/destinos/iguazu.jpg", alt: "Cataratas con arcoíris vistas desde una pasarela en la selva" }, info: noInfo },
+  { key: "cordoba", name: "Córdoba", lat: -31.4, lon: -64.2, desc: "Sierras, valles y rutas a pocas horas de viaje.", image: { src: "/images/destinos/cordoba.jpg", alt: "Lago entre sierras con una ciudad costera en Córdoba" }, info: noInfo },
+  { key: "mendoza", name: "Mendoza", lat: -32.9, lon: -68.8, desc: "Montaña, viñedos y la cordillera de fondo.", image: { src: "/images/destinos/mendoza.jpg", alt: "Viñedos al atardecer con la cordillera nevada de fondo" }, info: noInfo },
+  { key: "buenosaires", name: "Buenos Aires", lat: -34.6, lon: -58.4, desc: "La ciudad como punto de partida o de llegada.", info: noInfo }, // PENDIENTE: foto
+  { key: "costa", name: "Costa Atlántica", lat: -38.0, lon: -57.6, desc: "Playas y ciudades balnearias sobre el mar.", image: { src: "/images/destinos/costa-atlantica.jpg", alt: "Playa con dunas y un faro sobre la costa atlántica" }, info: noInfo },
+  { key: "bariloche", name: "Bariloche", lat: -41.1, lon: -71.3, desc: "Lagos, bosques y la cordillera patagónica.", image: { src: "/images/destinos/bariloche.jpg", alt: "Vista del Circuito Chico en otoño, con lagos y montañas nevadas" }, info: noInfo },
+  { key: "patagonia", name: "Patagonia", lat: -50.3, lon: -72.3, desc: "Grandes distancias, glaciares y estepa.", image: { src: "/images/destinos/patagonia.jpg", alt: "Glaciar entre montañas con témpanos sobre el lago" }, info: noInfo },
 ];
 
 export const corporate = ["Traslado de personal", "Eventos corporativos", "Congresos", "Convenciones", "Reuniones", "Viajes empresariales", "Aeropuertos", "Producciones"];

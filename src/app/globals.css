@@ -1148,6 +1148,14 @@ button {
   opacity: 1;
   visibility: visible;
 }
+.dest-photo {
+  object-fit: cover;
+  transform: scale(1.06);
+  transition: transform 1400ms ease;
+}
+.dest-slide.is-active .dest-photo {
+  transform: scale(1);
+}
 .dest-fallback {
   position: absolute;
   inset: 0;

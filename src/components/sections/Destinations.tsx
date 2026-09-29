@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import SmartVideo from "@/components/SmartVideo";
 import QuoteLink from "@/components/QuoteLink";
@@ -61,6 +62,8 @@ export default function Destinations() {
               <div key={d.key} className={`dest-slide${d.key === activeKey ? " is-active" : ""}`} aria-hidden={d.key !== activeKey}>
                 {d.video ? (
                   <SmartVideo {...d.video} fit="contain" sizes="(max-width: 900px) 100vw, 55vw" />
+                ) : d.image ? (
+                  <Image src={d.image.src} alt={d.image.alt} fill sizes="(max-width: 959px) 100vw, 60vw" className="dest-photo" />
                 ) : (
                   // Sin foto propia del destino: panel tipográfico (no se usan imágenes genéricas).
                   <div className="dest-fallback">

@@ -15,7 +15,7 @@ no se publican placeholders, textos de ejemplo ni enlaces vacíos.
 
 ## Contenido — `src/config/content.ts` y `src/config/site.ts`
 
-- **La unidad:** cantidad de pasajeros, capacidad de equipaje, año / modelo.
+- **La unidad:** capacidad de equipaje. (Ya cargados: 19 pasajeros, año 2026.)
 - **Seguridad:** mantenimiento del vehículo, experiencia y formación de los conductores, habilitaciones y seguros. La lista se oculta hasta tener al menos un dato.
 - **Testimonios:** opiniones reales y autorizadas (`site.testimonials`). La sección se oculta si no hay.
 - **Destinos:** duración, lugar de salida y modalidad de cada uno (`destinations[].info`). Confirmar además qué destinos se ofrecen realmente.
@@ -24,12 +24,13 @@ no se publican placeholders, textos de ejemplo ni enlaces vacíos.
 
 ## Recursos visuales faltantes
 
-- Fotos o videos propios de 7 destinos (Salta, Iguazú, Córdoba, Mendoza, Buenos Aires, Costa Atlántica y Patagonia). Hoy muestran un panel tipográfico con el nombre y las coordenadas. Solo Bariloche tiene video.
+- Foto de Buenos Aires: es el único destino sin imagen. Hoy muestra un panel tipográfico con el nombre y las coordenadas. El resto ya tiene foto (`public/images/destinos/`).
+- La foto de Mendoza tiene un cartel que dice "Bodega Uco Valley". Si no es una bodega real con la que trabajan, conviene reemplazarla para no sugerir un acuerdo.
 - Logo o isotipo de la marca (favicon y marca). Hoy se usa la línea dorada del diseño.
 - Opcional: una versión horizontal del video de Bariloche para escritorio (la actual es vertical 9:16 y se muestra completa con fondo difuminado).
 
 ## Notas sobre los recursos
 
-- En el video de Bariloche (generado con Higgsfield) la camioneta se ve de un tono más claro que la unidad real negra. Conviene revisarlo.
+- En el video de la Sprinter en ruta de montaña (generado con Higgsfield; se usa en "La unidad" y en el CTA final) la camioneta se ve de un tono más claro que la unidad real negra. Conviene revisarlo.
 - Las fotos originales con caras de frente no se usaron.
 - `interior-luz.jpg` (usada en Servicios, Confort e Instagram, igual que en el diseño) muestra pasajeros y conductor de espaldas o de perfil. Confirmar que están de acuerdo con aparecer, o reemplazarla.
