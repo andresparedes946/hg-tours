@@ -1753,6 +1753,20 @@ textarea.input {
 .cursor.is-hidden {
   opacity: 0;
 }
+/* Modo grabación (?grabar): se arrastra para tapar la patente. */
+.cursor.is-rec {
+  pointer-events: auto;
+  touch-action: none;
+  cursor: grab;
+  transition: none;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.cursor.is-rec:active {
+  cursor: grabbing;
+}
 
 /* ── Menos movimiento ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
